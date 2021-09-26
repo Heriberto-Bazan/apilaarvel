@@ -1,9 +1,10 @@
 Buenas tardes
 
-
-1.- se ejecuta el comando php artisan migrate para ejecutar las migraciones 
-3.- se ejecura el comando php artisan make:request EmpleadoCreateRequest
-5.- se ejecura el comando php artisan make:request EmpresaCreateRequest
-2.- se ejecuta el comando pho artisan php artisan db:seed para ejecutar las semillas
+1.- clonar el proyecto de git clone
+2.- instalar o actualizar composer "composer install o composer update"
+3.- generar key generate "php artisan key:generate"
+4.- limpiar cache "php artisan clean:cache"
+1.- se ejecuta el comando para ejecutar las migraciones "php artisan migrate"
+2.- se ejecuta el comando para ejecutar las semillas "php artisan db:seed"
 6.- se ejecuta el comando php artisan serve para levantar el api
 7.- se consume pueden realizar la pruebas atraves de postman
