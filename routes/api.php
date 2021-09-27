@@ -24,8 +24,8 @@ Route::post('/empleados', 'App\Http\Controllers\EmpleadoController@store');
 Route::put('/empleados/{id}', 'App\Http\Controllers\EmpleadoController@update');
 Route::delete('/empleados/{id}', 'App\Http\Controllers\EmpleadoController@destroy');
 
-Route::get('/empresas', 'App\Http\Controllers\EmpresaControllers@index');
-Route::get('/empresas/{id}','App\Http\Controllers\EmpresaControllers@show');
-Route::post('/empresas', 'App\Http\Controllers\EmpresaControllers@store');
-Route::put('/empresas/{id}', 'App\Http\Controllers\EmpresaControllers@update');
-Route::delete('/empresas/{id}', 'App\Http\Controllers\EmpresaControllers@destroy');
+Route::get('/empresas', 'App\Http\Controllers\EmpresaController@index');
+Route::get('/empresas/{id}','App\Http\Controllers\EmpresaController@show');
+Route::post('/empresas', 'App\Http\Controllers\EmpresaController@store');
+Route::put('/empresas/{id}', 'App\Http\Controllers\EmpresaController@update');
+Route::delete('/empresas/{id}', 'App\Http\Controllers\EmpresaController@destroy');

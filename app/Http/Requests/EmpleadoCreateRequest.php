@@ -25,7 +25,7 @@ class EmpleadoCreateRequest extends FormRequest
     {
         return [
             'nombre' => 'required',
-            'apellido' => 'required',
+            'apellido' => 'required'
         ];
     }
 
@@ -34,6 +34,14 @@ class EmpleadoCreateRequest extends FormRequest
         return [
             'nombre.required' => 'El : nombre es obligatorio.',
             'apellido.required' => 'El : nombre es obligatorio.',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'nombre' => 'El : nombre es obligatorio.',
+            'apellido' => 'El : nombre es obligatorio.',
         ];
     }
 }

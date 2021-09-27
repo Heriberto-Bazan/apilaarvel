@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmpresaCreateRequest;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Empresa;
 
@@ -34,13 +36,23 @@ class EmpresaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EmpresaCreateRequest $request)
     {
         $empresa = new Empresa();
         $empresa->nombre = $request->nombre;
         $empresa->correo = $request->correo;
-        $empresa->logotipo = $request->logotipo;
 
+        if($request->hasfile('logotipo')){
+
+            $imagen         =   $request->file('logotipo');
+            $nombreimagen   =   time().'.'.$imagen->getClientOriginalExtension();
+            $nuevaruta      =   public_path('storage/app/public'.$nombreimagen);
+            $imagen->move($nuevaruta,$nombreimagen);  
+            copy($imagen->getRealPath(),$nuevaruta);     
+            $empresa->logotipo  = $nombreimagen; // asignar el nombre para guardar
+            
+        }
+          
         $empresa->save();
     }
 

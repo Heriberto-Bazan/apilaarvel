@@ -17,7 +17,7 @@ class CreateEmpresasTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('correo');
-            $table->binary('logotipo')->nullable();
+            $table->string('logotipo')->nullable();
             $table->timestamps();
         });
     }

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Empleado extends Model
 {
     use HasFactory;
-    protected $filable = ['nombre','apellido','correo','telefono'];
+    protected $filable = [ 'nombre', 'apellido', 'correo', 'telefono', 'company_id' ];
 }

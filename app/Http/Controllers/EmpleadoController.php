@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmpleadoCreateRequest;
 use Illuminate\Http\Request;
 use App\Models\Empleado;
 
@@ -34,13 +35,14 @@ class EmpleadoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(EmpleadoCreateRequest $request)
+    {        
         $empleado = new Empleado();
         $empleado->nombre = $request->nombre;
         $empleado->apellido = $request->apellido;
         $empleado->correo = $request->correo;
         $empleado->telefono = $request->telefono;
+        $empleado->company_id = $request->company_id;
 
         $empleado->save();
     }
@@ -58,6 +60,7 @@ class EmpleadoController extends Controller
         $empleado->apellido = $request->apellido;
         $empleado->correo = $request->correo;
         $empleado->telefono = $request->telefono;
+        $empleado->company_id = $request->company_id;
 
         return $empleado;
     }
@@ -87,6 +90,7 @@ class EmpleadoController extends Controller
         $empleado->apellido = $request->apellido;
         $empleado->correo = $request->correo;
         $empleado->telefono = $request->telefono;
+        $empleado->company_id = $request->company_id;
 
         $empleado->save();
         return $empleado;
