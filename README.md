@@ -8,3 +8,7 @@ Buenas tardes
 2.- se ejecuta el comando para ejecutar las semillas "php artisan db:seed"
 6.- se ejecuta el comando php artisan serve para levantar el api
 7.- se consume pueden realizar la pruebas atraves de postman
+
+para poder realizar pruebas se debe clonar el proyecto https://github.com/Heriberto-Bazan/Datos
+
+tambien les adjunto las colection de postman
